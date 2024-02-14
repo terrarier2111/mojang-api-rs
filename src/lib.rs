@@ -164,7 +164,7 @@ pub struct ProfileProperty {
 /// # Ok(())
 /// # }
 /// ```
-pub async fn server_auth(server_hash: &str, username: &str) -> Result<ServerAuthResponse> {
+pub async fn server_auth(server_hash: String, username: String) -> Result<ServerAuthResponse> {
     #[cfg(not(test))]
         let url = format!(
         "https://sessionserver.mojang.com/session/minecraft/hasJoined?username={}&serverId={}&unsigned=false",
